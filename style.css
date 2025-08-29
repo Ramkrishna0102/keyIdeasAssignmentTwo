@@ -1,0 +1,115 @@
+.sc-section {
+    filter: blur(5px); /* Blur the entire section */
+}
+.clear-content {
+    filter: none; /* Keep this content clear */
+    position: relative;
+    z-index: 1; /* Ensure it stays on top */
+    display: inline-block;
+    padding: 5px;
+    background: white; /* Optional: to make it stand out */
+}
+
+.footer-text {
+  font-weight: bold;
+  text-align: center;
+  border: 4px;
+  font-size: 30px; 
+}
+
+@media (min-width: 640px) { /* Tablet */
+  .footer-text {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .footer-text {
+    font-size: 40px;
+  }
+}
+
+/* Blur the client logo images */
+.overflow-animation .slide-img .bg-img {
+            filter: blur(6px); /* Adjust blur radius as needed */
+            transition: filter 0.3s ease; /* Smooth transition for blur effect */
+        }
+
+        /* Stop animation by preventing sliding */
+        .overflow-animation {
+            overflow: hidden; /* Prevent scrolling/sliding */
+            animation: none !important; /* Disable any CSS animations */
+            transform: none !important; /* Prevent transform-based sliding */
+        }
+
+        /* Ensure the slider container doesn't move */
+        .slide-container {
+            display: flex; /* Keep logos in a row */
+            flex-wrap: nowrap; /* Prevent wrapping */
+            animation: none !important; /* Disable animations */
+            transform: none !important; /* Stop sliding */
+        }
+
+        /* Optional: Style to make logos visible but static */
+        .slide-img {
+            flex: 0 0 auto; /* Prevent resizing */
+            margin-right: 10px; /* Space between logos */
+}
+
+/* Blur the accordion headers (text and arrows) */
+.accordion .card-header .btn-link,
+.accordion .card-header .btn-link question h3 {
+    filter: blur(5px); /* Apply 5px blur to match previous example */
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+/* /* Blur any pseudo-elements  */
+.accordion .card-header .btn-link::before,
+.accordion .card-header .btn-link::after {
+    filter: blur(5px); /* Blur CSS-generated arrows */
+}
+
+/* Blur any SVG or img elements that might be used as arrows */
+.accordion .card-header .btn-link svg,
+.accordion .card-header .btn-link img {
+    filter: blur(5px); /* Blur inline SVG or image arrows */
+}
+
+/* Blur the accordion body content */
+.accordion .card-body {
+    filter: blur(5px); /* Apply 5px blur to body content */
+    transition: filter 0.3s ease;
+}
+
+/* Disable clicks on the accordion headers and arrows */
+.accordion .card-header .btn-link {
+    pointer-events: none; /* Prevent clicks */
+    cursor: not-allowed; /* Visual cue for disabled state */
+}
+
+/* Ensure the accordion container itself is not blurred unnecessarily */
+.accordion {
+    filter: none; /* Prevent blurring of non-content elements */
+}
+
+/* Optional: Reduce opacity to indicate disabled state */
+.accordion .card-header .btn-link {
+    opacity: 0.7; /* Slightly dim to show disabled state */
+}
+
+
+.diy-h {
+    text-align: center; /* Horizontally center text */
+    display: flex; /* Ensure flexbox is active for all breakpoints */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 100%; /* Ensure it takes full width to make centering noticeable */
+}
+
+/* Override Bootstrap's flex-md-row for tablet and desktop */
+@media (min-width: 768px) {
+    .diy-h {
+        justify-content: center; /* Re-ensure horizontal centering */
+        text-align: center; /* Re-ensure text centering */
+    }
+}
