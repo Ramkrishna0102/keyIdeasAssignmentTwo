@@ -98,13 +98,6 @@
 }
 
 
-.diy-h {
-    text-align: center; /* Horizontally center text */
-    display: flex; /* Ensure flexbox is active for all breakpoints */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    width: 100%; /* Ensure it takes full width to make centering noticeable */
-}
 
 /* Override Bootstrap's flex-md-row for tablet and desktop */
 @media (min-width: 768px) {
@@ -113,3 +106,7 @@
         text-align: center; /* Re-ensure text centering */
     }
 }
+
+
+
+
